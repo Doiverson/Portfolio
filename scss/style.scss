@@ -1,3 +1,61 @@
+// Variable
+$h1: 1rem;
+
+
+$test-color: grey;
+$test-border: 1px solid red;
+
+// Mixins
+@mixin full-displayed {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
 * {
   box-sizing: border-box;
 }
+
+section {
+  @include full-displayed;
+  border: $test-border;
+}
+
+section:nth-child(n+3){
+  padding-top: 74px;
+}
+
+
+// Header
+
+header {
+  width: 100vw;
+  padding-right: 1em;
+  padding-left: 1em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: $test-color;
+  a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+
+
+
+// Intro
+
+.intro {
+  margin-top: 74px;
+}
+
+
+
