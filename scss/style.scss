@@ -1,10 +1,14 @@
+
 // Variable (Size)
 $h1: 3.2rem;
 $h2: 2.5rem;
+$p: 1.6rem;
+
 
 // Variable (Font)
 $font-Futura: 'Futura SC Demi';
 $font-Roboto: 'Roboto';
+$white: #FFFFFF;
 
 
 $test-color: grey;
@@ -27,20 +31,38 @@ $test-border: 1px solid red;
 
 ///////////////////////////////////////////////////////////////
 
+// Base
 html {
   font-size: 62.5%;
+  font-family: $font-Roboto;
 }
 
 * {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+p {
+  font-size: $p;
+}
+
 section {
   @include full-displayed;
   border: $test-border;
+
+  &:nth-child(3) {
+    padding: 0 20px;
+  }
 }
 
-section:nth-child(n+3){
+.top-padding {
   padding-top: 74px;
 }
 
@@ -55,7 +77,7 @@ header {
   left: 0;
   top: 0;
   z-index: 1000;
-  background-color: $test-color;
+
   a {
     display: inline-block;
     width: 50px;
@@ -83,25 +105,56 @@ header {
     margin-bottom: 8rem;
 
     h1 {
-      font-size: $h1;
       font-family: $font-Futura, sans-serif;
       margin: 0;
     }
 
     .type-writer {
-      height: 50px;
-      width: 50px;
-      background-color: $test-color;
+      font-family: $font-Futura;
+      font-size: 2.5rem;
+      margin: 25px auto 0;
+      text-align: center;
+
     }
   }
 }
 
 // About Me
+
+.backgroud-brown {
+  background-color: #2E1902;
+}
+
 .about-wrapper {
-  h2 {
-    font-size: $h2;
+  height: 100vh;
+  color: $white;
+
+  .myself {
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      line-height: 22px;
+    }
   }
 }
 
 
 
+
+// ======================================
+//  Partial Imports
+// ======================================
+
+// Utilities
+@import 'utilities/_typed_effect';
+
+// Base Styles
+
+
+// Layout Styles
+
+
+// Component Styles

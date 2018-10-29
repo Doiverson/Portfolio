@@ -5,10 +5,23 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Roboto";
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.6rem;
 }
 
 section {
@@ -17,7 +30,11 @@ section {
   border: 1px solid red;
 }
 
-section:nth-child(n+3) {
+section:nth-child(3) {
+  padding: 0 20px;
+}
+
+.top-padding {
   padding-top: 74px;
 }
 
@@ -29,7 +46,6 @@ header {
   left: 0;
   top: 0;
   z-index: 1000;
-  background-color: grey;
 }
 
 header a {
@@ -55,17 +71,57 @@ header a {
 }
 
 .intro-wrapper .intro-content h1 {
-  font-size: 3.2rem;
   font-family: "Futura SC Demi", sans-serif;
   margin: 0;
 }
 
 .intro-wrapper .intro-content .type-writer {
-  height: 50px;
-  width: 50px;
-  background-color: grey;
+  font-family: "Futura SC Demi";
+  font-size: 2.5rem;
+  margin: 25px auto 0;
+  text-align: center;
 }
 
-.about-wrapper h2 {
-  font-size: 2.5rem;
+.backgroud-brown {
+  background-color: #2E1902;
+}
+
+.about-wrapper {
+  height: 100vh;
+  color: #FFFFFF;
+}
+
+.about-wrapper .myself h2 {
+  text-align: center;
+}
+
+.about-wrapper .myself p {
+  line-height: 22px;
+}
+
+.ityped-cursor {
+  font-size: 3.8rem;
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
 }
