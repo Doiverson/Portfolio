@@ -1,9 +1,15 @@
-// Variable
-$h1: 1rem;
+// Variable (Size)
+$h1: 3.2rem;
+$h2: 2.5rem;
+
+// Variable (Font)
+$font-Futura: 'Futura SC Demi';
+$font-Roboto: 'Roboto';
 
 
 $test-color: grey;
 $test-border: 1px solid red;
+
 
 // Mixins
 @mixin full-displayed {
@@ -12,7 +18,18 @@ $test-border: 1px solid red;
 }
 
 
+// Fonts
+  @font-face {
+    font-family: 'Futura SC Demi';
+    src: url('../font/FuturaSC-Dem.otf') format('opentype');
+  }
 
+
+///////////////////////////////////////////////////////////////
+
+html {
+  font-size: 62.5%;
+}
 
 * {
   box-sizing: border-box;
@@ -53,8 +70,37 @@ header {
 
 // Intro
 
-.intro {
-  margin-top: 74px; // avoiding hiding behind header
+.intro-wrapper {
+  height: 100vh;
+  padding-top: 74px; // avoiding hiding behind header
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+
+  .intro-content {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    h1 {
+      font-size: $h1;
+      font-family: $font-Futura, sans-serif;
+      margin: 0;
+    }
+
+    .type-writer {
+      height: 50px;
+      width: 50px;
+      background-color: $test-color;
+    }
+  }
+}
+
+// About Me
+.about-wrapper {
+  h2 {
+    font-size: $h2;
+  }
 }
 
 

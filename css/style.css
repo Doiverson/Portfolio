@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Futura SC Demi';
+  src: url("../font/FuturaSC-Dem.otf") format("opentype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -31,6 +40,32 @@ header a {
   margin-bottom: 12px;
 }
 
-.intro {
-  margin-top: 74px;
+.intro-wrapper {
+  height: 100vh;
+  padding-top: 74px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-wrapper .intro-content {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.intro-wrapper .intro-content h1 {
+  font-size: 3.2rem;
+  font-family: "Futura SC Demi", sans-serif;
+  margin: 0;
+}
+
+.intro-wrapper .intro-content .type-writer {
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+}
+
+.about-wrapper h2 {
+  font-size: 2.5rem;
 }
