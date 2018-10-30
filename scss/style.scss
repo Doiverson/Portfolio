@@ -16,6 +16,9 @@ $test-color: grey;
 $test-border: 1px solid red;
 
 
+// Variable (Other)
+$section-padding-mobile: 0 17px;
+
 // Mixins
 @mixin full-displayed {
   width: 100%;
@@ -64,7 +67,11 @@ section {
 
   &:nth-child(3) {
     height: 150vh;
-    padding: 0 17px;
+    padding: $section-padding-mobile;
+  }
+
+  &:nth-child(4) {
+    padding: $section-padding-mobile;
   }
 }
 
@@ -155,6 +162,16 @@ header {
   }
 }
 
+
+// Projects
+
+.projects-wrapper {
+
+  .work {
+    width: 100%;
+    height: 300px;
+  }
+}
 
 
 
