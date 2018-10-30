@@ -20,6 +20,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2.1rem;
+}
+
 p {
   font-size: 1.6rem;
 }
@@ -31,7 +35,8 @@ section {
 }
 
 section:nth-child(3) {
-  padding: 0 20px;
+  height: 150vh;
+  padding: 0 17px;
 }
 
 .top-padding {
@@ -91,12 +96,23 @@ header a {
   color: #FFFFFF;
 }
 
+.about-wrapper .myself {
+  margin-bottom: 32px;
+}
+
 .about-wrapper .myself h2 {
   text-align: center;
 }
 
 .about-wrapper .myself p {
   line-height: 22px;
+  margin-bottom: 0;
+}
+
+.about-wrapper .flex-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .ityped-cursor {

@@ -2,6 +2,7 @@
 // Variable (Size)
 $h1: 3.2rem;
 $h2: 2.5rem;
+$h3: 2.1rem;
 $p: 1.6rem;
 
 
@@ -49,6 +50,10 @@ h2 {
   font-size: $h2;
 }
 
+h3 {
+  font-size: $h3;
+}
+
 p {
   font-size: $p;
 }
@@ -58,7 +63,8 @@ section {
   border: $test-border;
 
   &:nth-child(3) {
-    padding: 0 20px;
+    height: 150vh;
+    padding: 0 17px;
   }
 }
 
@@ -130,6 +136,7 @@ header {
   color: $white;
 
   .myself {
+    margin-bottom: 32px;
 
     h2 {
       text-align: center;
@@ -137,9 +144,17 @@ header {
 
     p {
       line-height: 22px;
+      margin-bottom: 0;
     }
   }
+
+  .flex-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
+
 
 
 
