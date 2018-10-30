@@ -40,6 +40,7 @@ section:nth-child(3) {
 }
 
 section:nth-child(4) {
+  height: 150vh;
   padding: 0 17px;
 }
 
@@ -66,11 +67,11 @@ header a {
 }
 
 .intro-wrapper {
-  height: 100vh;
-  padding-top: 74px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  height: 100vh;
+  padding-top: 74px;
   justify-content: center;
 }
 
@@ -96,7 +97,7 @@ header a {
 }
 
 .about-wrapper {
-  height: 100vh;
+  height: 100%;
   color: #FFFFFF;
 }
 
@@ -115,13 +116,23 @@ header a {
 
 .about-wrapper .flex-wrap {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.projects-wrapper {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .projects-wrapper .work {
   width: 100%;
-  height: 300px;
+  height: 270px;
+  margin-bottom: 5px;
+  background-color: grey;
 }
 
 .ityped-cursor {
