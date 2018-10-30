@@ -17,11 +17,12 @@ $test-border: 1px solid red;
 
 // Variables (Color)
 $orange: #FF4E00;
-$dark-brown: #2E1902;
+$dark-brown: #1D0F00;
 $neon-green: #00ff9c;
 
 // Variable (Other)
 $section-padding-mobile: 0 17px;
+$line-height: 25px;
 
 // Mixins
 @mixin full-displayed {
@@ -35,7 +36,22 @@ $section-padding-mobile: 0 17px;
   flex-direction: column;
 }
 
-@mixin hover
+@mixin hover {
+  a {
+    color: $neon-green;
+    text-decoration: none;
+    -webkit-transition: color ease;
+    -moz-transition: color ease;
+    -ms-transition: color ease;
+    -o-transition: color ease;
+    transition: color 1s;
+
+    &:hover {
+      color: $orange;
+    }
+
+  }
+}
 
 
 // Fonts
@@ -165,7 +181,7 @@ header {
     }
 
     p {
-      line-height: 22px;
+      line-height: $line-height;
       margin-bottom: 0;
     }
   }
@@ -204,25 +220,14 @@ header {
   }
 
   .email {
-    a {
-      color: $neon-green;
-      text-decoration: none;
-      -webkit-transition: color ease;
-      -moz-transition: color ease;
-      -ms-transition: color ease;
-      -o-transition: color ease;
-      transition: color 1s;
-
-      &:hover {
-        color: $orange;
-      }
-
-    }
+    @include hover;
   }
 
   p {
+    @include hover;
     font-size: 2rem;
     text-align: left;
+    line-height: $line-height;
   }
 }
 

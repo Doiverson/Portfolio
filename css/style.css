@@ -97,7 +97,7 @@ header a {
 }
 
 .backgroud-brown {
-  background-color: #2E1902;
+  background-color: #1D0F00;
 }
 
 .about-wrapper {
@@ -114,7 +114,7 @@ header a {
 }
 
 .about-wrapper .myself p {
-  line-height: 22px;
+  line-height: 25px;
   margin-bottom: 0;
 }
 
@@ -166,6 +166,21 @@ header a {
 .contact-wrapper p {
   font-size: 2rem;
   text-align: left;
+  line-height: 25px;
+}
+
+.contact-wrapper p a {
+  color: #00ff9c;
+  text-decoration: none;
+  -webkit-transition: color ease;
+  -moz-transition: color ease;
+  -ms-transition: color ease;
+  -o-transition: color ease;
+  transition: color 1s;
+}
+
+.contact-wrapper p a:hover {
+  color: #FF4E00;
 }
 
 .ityped-cursor {
