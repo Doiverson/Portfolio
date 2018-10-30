@@ -44,6 +44,10 @@ section:nth-child(4) {
   padding: 0 17px;
 }
 
+section:last-child {
+  padding: 0 17px;
+}
+
 .top-padding {
   padding-top: 74px;
 }
@@ -133,6 +137,35 @@ header a {
   height: 270px;
   margin-bottom: 5px;
   background-color: grey;
+}
+
+.contact-wrapper {
+  height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.contact-wrapper h2 {
+  font-family: "Futura SC Demi";
+}
+
+.contact-wrapper .email a {
+  color: #00ff9c;
+  text-decoration: none;
+  -webkit-transition: color ease;
+  -moz-transition: color ease;
+  -ms-transition: color ease;
+  -o-transition: color ease;
+  transition: color 1s;
+}
+
+.contact-wrapper .email a:hover {
+  color: #FF4E00;
+}
+
+.contact-wrapper p {
+  font-size: 2rem;
+  text-align: left;
 }
 
 .ityped-cursor {

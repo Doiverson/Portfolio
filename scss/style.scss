@@ -15,6 +15,10 @@ $white: #FFFFFF;
 $test-color: grey;
 $test-border: 1px solid red;
 
+// Variables (Color)
+$orange: #FF4E00;
+$dark-brown: #2E1902;
+$neon-green: #00ff9c;
 
 // Variable (Other)
 $section-padding-mobile: 0 17px;
@@ -30,6 +34,8 @@ $section-padding-mobile: 0 17px;
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+@mixin hover
 
 
 // Fonts
@@ -78,6 +84,10 @@ section {
 
   &:nth-child(4) {
     height: 150vh;
+    padding: $section-padding-mobile;
+  }
+
+  &:last-child {
     padding: $section-padding-mobile;
   }
 }
@@ -140,7 +150,7 @@ header {
 // About Me
 
 .backgroud-brown {
-  background-color: #2E1902;
+  background-color: $dark-brown;
 }
 
 .about-wrapper {
@@ -184,10 +194,44 @@ header {
 
 // Contact
 
+.contact-wrapper {
+  height: 100%;
+  text-align: center;
+  color: $white;
+
+  h2 {
+    font-family: $font-Futura;
+  }
+
+  .email {
+    a {
+      color: $neon-green;
+      text-decoration: none;
+      -webkit-transition: color ease;
+      -moz-transition: color ease;
+      -ms-transition: color ease;
+      -o-transition: color ease;
+      transition: color 1s;
+
+      &:hover {
+        color: $orange;
+      }
+
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
 
 // Footer
 
+#footer-container {
 
+}
 
 
 
