@@ -35,16 +35,17 @@ section {
 }
 
 section:nth-child(3) {
-  height: 150vh;
+  height: 220vh;
   padding: 0 17px;
 }
 
 section:nth-child(4) {
-  height: 150vh;
+  height: 180vh;
   padding: 0 17px;
 }
 
 section:last-child {
+  height: 55vh;
   padding: 0 17px;
 }
 
@@ -98,11 +99,20 @@ header a {
 
 .backgroud-brown {
   background-color: #1D0F00;
+  color: #FFFFFF;
 }
 
 .about-wrapper {
   height: 100%;
-  color: #FFFFFF;
+}
+
+.about-wrapper .bio-img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-wrapper .bio-img img {
+  max-width: 80%;
 }
 
 .about-wrapper .myself {
@@ -130,19 +140,20 @@ header a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .projects-wrapper .work {
-  width: 100%;
+  width: 330px;
   height: 270px;
   margin-bottom: 5px;
-  background-color: grey;
+  background-image: url(../img/test.jpg);
+  background-size: cover;
 }
 
 .contact-wrapper {
   height: 100%;
   text-align: center;
-  color: #FFFFFF;
 }
 
 .contact-wrapper h2 {
@@ -183,6 +194,40 @@ header a {
   color: #FF4E00;
 }
 
+#footer-container {
+  text-align: center;
+  height: 100%;
+  padding: 0 17px;
+}
+
+#footer-container h2 {
+  font-family: "Futura SC Demi";
+}
+
+#footer-container span {
+  font-size: 60%;
+}
+
+.detail-container .title-wrapper {
+  padding: 74px 17px 0 17px;
+  height: 35vh;
+  position: relative;
+}
+
+.detail-container .title-wrapper h2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.detail-container .dsc-wrapper {
+  padding: 20px 17px;
+}
+
+.detail-container .ss-wrapper img {
+  max-width: 80%;
+}
+
 .ityped-cursor {
   font-size: 3.8rem;
   opacity: 1;
@@ -208,4 +253,22 @@ header a {
   100% {
     opacity: 0;
   }
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }

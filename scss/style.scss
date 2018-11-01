@@ -94,16 +94,17 @@ section {
   border: $test-border;
 
   &:nth-child(3) {
-    height: 150vh;
+    height: 220vh;
     padding: $section-padding-mobile;
   }
 
   &:nth-child(4) {
-    height: 150vh;
+    height: 180vh;
     padding: $section-padding-mobile;
   }
 
   &:last-child {
+    height: 55vh;
     padding: $section-padding-mobile;
   }
 }
@@ -167,11 +168,20 @@ header {
 
 .backgroud-brown {
   background-color: $dark-brown;
+  color: $white;
 }
 
 .about-wrapper {
   height: 100%;
-  color: $white;
+
+  .bio-img {
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      max-width: 80%;
+    }
+  }
 
   .myself {
     margin-bottom: 32px;
@@ -198,12 +208,14 @@ header {
 .projects-wrapper {
   height: 100%;
   @include flex;
+  align-items: center;
 
   .work {
-    width: 100%;
+    width: 330px;
     height: 270px;
     margin-bottom: 5px;
-    background-color: $test-color;
+    background-image: url(../img/test.jpg);
+    background-size: cover;
   }
 }
 
@@ -213,7 +225,6 @@ header {
 .contact-wrapper {
   height: 100%;
   text-align: center;
-  color: $white;
 
   h2 {
     font-family: $font-Futura;
@@ -235,8 +246,53 @@ header {
 // Footer
 
 #footer-container {
+  text-align: center;
+  height: 100%;
+  padding: $section-padding-mobile;
+
+  h2 {
+    font-family: $font-Futura;
+  }
+
+  span {
+    font-size: 60%;
+  }
+}
+
+
+// work.html
+
+.detail-container {
+
+  .title-wrapper {
+    padding: 74px 17px 0 17px;
+    height: 35vh;
+    position: relative;
+
+    h2 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  .dsc-wrapper {
+    padding: 20px 17px;
+  }
+
+  .tag {
+
+  }
+
+  .ss-wrapper {
+    img {
+      max-width: 80%;
+    }
+  }
+
 
 }
+
 
 
 
@@ -246,6 +302,7 @@ header {
 
 // Utilities
 @import 'utilities/_typed_effect';
+@import "utilities/_slidein_effect";
 
 // Base Styles
 
