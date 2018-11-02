@@ -5,6 +5,8 @@ $h2: 2.5rem;
 $h3: 2.1rem;
 $p: 1.6rem;
 
+$h1-sm: 5.2rem;
+
 
 // Variable (Font)
 $font-Futura: 'Futura SC Demi';
@@ -22,6 +24,7 @@ $neon-green: #00ff9c;
 
 // Variable (Other)
 $section-padding-mobile: 0 17px 30px;
+$section-padding-desktop: 0 70px 30px;
 $line-height: 25px;
 
 // Mixins
@@ -45,6 +48,7 @@ $line-height: 25px;
     -ms-transition: color ease;
     -o-transition: color ease;
     transition: color 1s;
+    @content;
 
     &:hover {
       color: $orange;
@@ -111,6 +115,10 @@ section {
   &:first-child {
     height: 100vh;
   }
+
+  @include mq() {
+    padding: $section-padding-desktop;
+  }
 }
 
 .top-padding {
@@ -139,6 +147,48 @@ header {
 }
 
 
+// Main nav
+
+.main-nav {
+  display: none;
+  width: 100vh;
+  margin-left: 25px;
+  top: 0;
+  position: fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  z-index: 9999;
+
+  ul {
+    @include flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    position: relative;
+
+    li {
+      margin-right: 25px;
+      list-style: none;
+      height: 100%;
+      text-transform: uppercase;
+
+      @include hover() {
+        color: black;
+      }
+
+      a {
+        font-size: $h3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include mq() {
+    display: block;
+  }
+}
 
 
 // Intro
@@ -164,6 +214,21 @@ header {
       margin: 25px auto 0;
       text-align: center;
 
+    }
+  }
+
+  @include mq() {
+    .intro-content {
+      text-align: left;
+
+      .type-writer {
+        font-size: 4.5rem;
+        text-align: left;
+      }
+    }
+
+    h1 {
+      font-size: $h1-sm;
     }
   }
 }
@@ -210,19 +275,51 @@ header {
 // Projects
 
 .projects-wrapper {
-  height: 100%;
   @include flex;
   align-items: center;
 
   .work {
-    width: 330px;
-    height: 270px;
+    width: 80%;
     margin-bottom: 5px;
-    background-image: url(../img/test.jpg);
-    background-size: cover;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .sub {
+    display: none;
+    position: relative;
+
+    .sub-title-wrapper {
+      width: 65%;
+      height: 40%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
+
+  @include mq() {
+
+    flex-direction: row;
+    align-items: unset;
+
+    .work,
+    .sub {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    .sub {
+      display: block;
+    }
   }
 }
-
 
 // Contact
 

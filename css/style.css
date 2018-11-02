@@ -38,6 +38,12 @@ section:first-child {
   height: 100vh;
 }
 
+@media screen and (min-width: 700px) {
+  section {
+    padding: 0 70px 30px;
+  }
+}
+
 .top-padding {
   padding-top: 74px;
 }
@@ -58,6 +64,62 @@ header a {
   height: 50px;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+.main-nav {
+  display: none;
+  width: 100vh;
+  margin-left: 25px;
+  top: 0;
+  position: fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  z-index: 9999;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  position: relative;
+}
+
+.main-nav ul li {
+  margin-right: 25px;
+  list-style: none;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.main-nav ul li a {
+  color: #00ff9c;
+  text-decoration: none;
+  -webkit-transition: color ease;
+  -moz-transition: color ease;
+  -ms-transition: color ease;
+  -o-transition: color ease;
+  transition: color 1s;
+  color: black;
+}
+
+.main-nav ul li a:hover {
+  color: #FF4E00;
+}
+
+.main-nav ul li a {
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  .main-nav {
+    display: block;
+  }
 }
 
 .intro-wrapper {
@@ -84,6 +146,19 @@ header a {
   font-size: 2.5rem;
   margin: 25px auto 0;
   text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .intro-wrapper .intro-content {
+    text-align: left;
+  }
+  .intro-wrapper .intro-content .type-writer {
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .intro-wrapper h1 {
+    font-size: 5.2rem;
+  }
 }
 
 .background-brown {
@@ -125,7 +200,6 @@ header a {
 }
 
 .projects-wrapper {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -133,11 +207,44 @@ header a {
 }
 
 .projects-wrapper .work {
-  width: 330px;
-  height: 270px;
+  width: 80%;
   margin-bottom: 5px;
-  background-image: url(../img/test.jpg);
-  background-size: cover;
+}
+
+.projects-wrapper .work img {
+  max-width: 100%;
+}
+
+.projects-wrapper .sub {
+  display: none;
+  position: relative;
+}
+
+.projects-wrapper .sub .sub-title-wrapper {
+  width: 65%;
+  height: 40%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .projects-wrapper {
+    flex-direction: row;
+    align-items: unset;
+  }
+  .projects-wrapper .work,
+  .projects-wrapper .sub {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .projects-wrapper .sub {
+    display: block;
+  }
 }
 
 .contact-wrapper {
