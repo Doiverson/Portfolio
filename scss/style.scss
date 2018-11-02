@@ -21,13 +21,13 @@ $dark-brown: #1D0F00;
 $neon-green: #00ff9c;
 
 // Variable (Other)
-$section-padding-mobile: 0 17px;
+$section-padding-mobile: 0 17px 30px;
 $line-height: 25px;
 
 // Mixins
 @mixin full-displayed {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
 }
 
 @mixin flex {
@@ -50,6 +50,20 @@ $line-height: 25px;
       color: $orange;
     }
 
+  }
+}
+
+// Media Query
+
+$breakpoints: (
+        'sm': 'screen and (min-width: 700px)',
+        'md': 'screen and (min-width: 1000px)',
+        'lg': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
   }
 }
 
@@ -91,21 +105,11 @@ p {
 
 section {
   @include full-displayed;
+  padding: $section-padding-mobile;
   border: $test-border;
 
-  &:nth-child(3) {
-    height: 220vh;
-    padding: $section-padding-mobile;
-  }
-
-  &:nth-child(4) {
-    height: 180vh;
-    padding: $section-padding-mobile;
-  }
-
-  &:last-child {
-    height: 55vh;
-    padding: $section-padding-mobile;
+  &:first-child {
+    height: 100vh;
   }
 }
 
@@ -166,7 +170,7 @@ header {
 
 // About Me
 
-.backgroud-brown {
+.background-brown {
   background-color: $dark-brown;
   color: $white;
 }
@@ -266,7 +270,7 @@ header {
 
   .title-wrapper {
     padding: 74px 17px 0 17px;
-    height: 35vh;
+    height: 45vh;
     position: relative;
 
     h2 {
@@ -276,20 +280,69 @@ header {
     }
   }
 
-  .dsc-wrapper {
-    padding: 20px 17px;
-  }
+  .background-brown {
 
-  .tag {
+    .dsc-wrapper {
+      padding: 20px 17px;
 
-  }
+      div {
 
-  .ss-wrapper {
-    img {
-      max-width: 80%;
+        .tags {
+          margin: 20px auto;
+          overflow: hidden;
+          text-align: left;
+
+          .tag {
+            background: #ffffff26;
+            border-radius: 3px 0 0 3px;
+            color: $white;
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 20px 0 23px;
+            position: relative;
+            margin: 0 10px 10px 0;
+            text-decoration: none;
+
+            &::before {
+              background: $orange;
+              border-radius: 10px;
+              box-shadow: inset 0 1px rgba(0,0,0,0.25);
+              content: '';
+              height: 6px;
+              left: 10px;
+              position: absolute;
+              width: 6px;
+              top: 10px;
+            }
+
+            &::after {
+              background: $dark-brown;
+              border-bottom: 13px solid transparent;
+              border-left: 10px solid  #ffffff26;
+              border-top: 13px solid transparent;
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .ss-wrapper {
+      @include flex;
+      align-items: center;
+      padding-bottom: 20px;
+
+      img {
+        max-width: 80%;
+        margin-bottom: 5px;
+      }
+
     }
   }
-
 
 }
 
@@ -302,12 +355,15 @@ header {
 
 // Utilities
 @import 'utilities/_typed_effect';
-@import "utilities/_slidein_effect";
+@import 'utilities/_slidein_effect';
 
 // Base Styles
 
 
 // Layout Styles
 
-
 // Component Styles
+
+
+
+// Flex wrap + Flex Basis [flex-basis: 100% or 50% or 25%;]
