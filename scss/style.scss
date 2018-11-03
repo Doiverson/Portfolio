@@ -6,6 +6,7 @@ $h3: 2.1rem;
 $p: 1.6rem;
 
 $h1-sm: 5.2rem;
+$h1-md: 7.2rem;
 
 
 // Variable (Font)
@@ -56,6 +57,57 @@ $line-height: 25px;
 
   }
 }
+
+@mixin hover-underline {
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    @content;
+
+    &:after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: $orange;
+      transform: scale(0, 1);
+      transform-origin: center top;
+      transition: transform .5s;
+    }
+
+    &:hover:after {
+      transform: scale(1, 1);
+    }
+  }
+
+}
+
+@mixin scale {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: 0.5s;
+    @content;
+    
+    &:hover {
+      -webkit-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -o-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2);
+    }
+  }
+}
+
 
 // Media Query
 
@@ -178,9 +230,52 @@ header {
         color: black;
       }
 
+      @include hover-underline() {
+        font-size: 1.8rem;
+      }
+
+      @include mq(md) {
+        a {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @include mq() {
+    display: block;
+  }
+}
+
+// Social Nav
+
+.social-nav {
+  display: none;
+  right: 25px;
+  top: 36%;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  width: 3%;
+
+  ul {
+    @include flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    position: relative;
+
+    @include hover() {
+      color: black;
+    }
+
+    @include scale() {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+
+    @include mq(md) {
       a {
-        font-size: $h3;
-        text-decoration: none;
+        font-size: 2.5rem;
       }
     }
   }
@@ -231,6 +326,17 @@ header {
       font-size: $h1-sm;
     }
   }
+
+  @include mq(md) {
+    .type-writer {
+      font-size: 5.5rem;
+    }
+
+    h1 {
+      font-size: $h1-md;
+    }
+
+  }
 }
 
 // About Me
@@ -249,6 +355,14 @@ header {
 
     img {
       max-width: 80%;
+
+      @include mq() {
+        max-width: 70%;
+      }
+
+      @include mq() {
+        max-width: 60%;
+      }
     }
   }
 
@@ -292,6 +406,7 @@ header {
     position: relative;
 
     .sub-title-wrapper {
+      @include hover-underline;
       width: 65%;
       height: 40%;
       position: absolute;
@@ -340,6 +455,29 @@ header {
     font-size: 2rem;
     text-align: left;
     line-height: $line-height;
+    @include mq() {
+      text-align: center;
+    }
+  }
+
+  ul {
+    @include flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+
+    @include hover() {
+      color: $white;
+    }
+
+    a {
+      font-size: 2rem;
+      line-height: 2;
+      text-decoration: none;
+      margin-right: 10px;
+    }
   }
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Shosuke Doi Front-end Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/ityped@1.0.3"></script>
@@ -23,16 +24,27 @@
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">What I can do</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
 
+        <nav class="social-nav">
+            <ul>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class='fab fa-github'></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </nav>
+
+
         <!--Intro on the Top-->
-        <section>
+        <section class="parallax-parent">
 
             <div class="intro-wrapper">
-                <div class="intro-content">
+                <div class="intro-content l1">
                     <h1>I'm Shosuke Doi.</h1>
                     <h1>Japanese Front-end Developer,</h1>
                     <h1>based in Vancouver.</h1>
@@ -94,13 +106,13 @@
                <div class="work align-left slide-in"><img src="img/test.jpg" alt="work-1"></div>
                <div class="sub align-right slide-in">
                    <div class="sub-title-wrapper">
-                       <h3>Mohr Good Ideas</h3>
+                       <h2>Mohr Good Ideas</h2>
                        <a href="#">More details</a>
                    </div>
                </div>
                <div class="sub align-left slide-in">
                    <div class="sub-title-wrapper">
-                       <h3>Mohr Good Ideas</h3>
+                       <h2>Mohr Good Ideas</h2>
                        <a href="#">More details</a>
                    </div>
                </div>
@@ -108,13 +120,13 @@
                <div class="work align-left slide-in"><img src="img/test.jpg" alt="work-3"></div>
                <div class="sub align-right slide-in">
                    <div class="sub-title-wrapper">
-                       <h3>Mohr Good Ideas</h3>
+                       <h2>Mohr Good Ideas</h2>
                        <a href="#">More details</a>
                    </div>
                </div>
                <div class="sub align-left slide-in">
                    <div class="sub-title-wrapper">
-                       <h3>Mohr Good Ideas</h3>
+                       <h2>Mohr Good Ideas</h2>
                        <a href="#">More details</a>
                    </div>
                </div>
@@ -130,6 +142,15 @@
                 <h2>My PASSION is here</h2>
                 <h2 class="email"><a href="">doiverson.canada@gmail.com</a></h2>
                 <p>For further information about me,<br>I'm also on <a href="">linkedin</a> &amp; <a href="">Instagram</a> &amp; <a href="">Twitter</a> &amp; <a href="">Facebook</a>.</p>
+                <nav class="social-icons">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    </ul>
+                </nav>
             </div>
 
         </section>
@@ -147,7 +168,7 @@
     </div>
 
 </div>
-
+<script src="js/_parallax.js"></script>
 <script src="js/_slidein.js"></script>
 <script src="js/_ityped.js"></script>
 <!--<script src="js/index.js"></script>-->
