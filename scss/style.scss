@@ -137,10 +137,11 @@ $breakpoints: (
 html {
   font-size: 62.5%;
   font-family: $font-Roboto;
+  box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 h1 {
@@ -163,6 +164,7 @@ section {
   @include full-displayed;
   padding: $section-padding-mobile;
   border: $test-border;
+  overflow: hidden;
 
   &:first-child {
     height: 100vh;
@@ -390,11 +392,11 @@ header {
 
 .projects-wrapper {
   @include flex;
-  align-items: center;
 
   .work {
     width: 80%;
     margin-bottom: 5px;
+    z-index: -1;
 
     img {
       max-width: 100%;
@@ -422,7 +424,6 @@ header {
   @include mq() {
 
     flex-direction: row;
-    align-items: unset;
 
     .work,
     .sub {
@@ -466,7 +467,6 @@ header {
     list-style: none;
     flex-direction: row;
     justify-content: center;
-    position: relative;
 
     @include hover() {
       color: $white;
@@ -583,7 +583,6 @@ header {
 
 
 
-
 // ======================================
 //  Partial Imports
 // ======================================
@@ -598,7 +597,7 @@ header {
 // Layout Styles
 
 // Component Styles
-
+@import "components/mobile_nav";
 
 
 // Flex wrap + Flex Basis [flex-basis: 100% or 50% or 25%;]

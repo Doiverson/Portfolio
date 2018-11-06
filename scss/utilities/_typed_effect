@@ -8,6 +8,10 @@
   animation-direction: alternate;
 }
 
+.open .ityped-cursor {
+  opacity: 0;
+}
+
 @keyframes blink {
   100% {
     opacity: 0;
