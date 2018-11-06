@@ -470,6 +470,13 @@ header a {
   text-align: center;
   height: 100%;
   padding: 0 17px 30px;
+  margin-bottom: 55px;
+}
+
+@media screen and (min-width: 700px) {
+  #footer-container {
+    margin-bottom: 0;
+  }
 }
 
 #footer-container h2 {
@@ -702,6 +709,12 @@ header a {
   transform: scale(1);
 }
 
+@media screen and (min-width: 700px) {
+  #nav-bg {
+    display: none;
+  }
+}
+
 .open #nav-bg {
   -webkit-transform: scale(30);
   transform: scale(30);
@@ -723,6 +736,12 @@ header a {
   padding: 15px;
   z-index: 1001;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 700px) {
+  #nav-toggle {
+    display: none;
+  }
 }
 
 #nav-toggle div {

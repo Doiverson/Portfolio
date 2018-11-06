@@ -488,6 +488,11 @@ header {
   text-align: center;
   height: 100%;
   padding: $section-padding-mobile;
+  margin-bottom: 55px;
+
+  @include mq() {
+    margin-bottom: 0;
+  }
 
   h2 {
     font-family: $font-Futura;
