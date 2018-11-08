@@ -163,7 +163,6 @@ p {
 section {
   @include full-displayed;
   padding: $section-padding-mobile;
-  border: $test-border;
   overflow: hidden;
 
   &:first-child {
@@ -214,6 +213,7 @@ header {
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
   z-index: 9999;
+  font-weight: bold;
 
   ul {
     @include flex;
@@ -509,14 +509,20 @@ header {
 .detail-container {
 
   .title-wrapper {
-    padding: 74px 17px 0 17px;
+    padding: 74px 17px 0;
     height: 45vh;
     position: relative;
 
-    h2 {
-      margin: 0;
-      position: absolute;
-      top: 50%;
+    h1 {
+      position: relative;
+    }
+
+    @include mq() {
+      padding: 74px 70px 0;
+
+      h1 {
+        font-size: $h1-sm;
+      }
     }
   }
 
@@ -525,10 +531,14 @@ header {
     .dsc-wrapper {
       padding: 20px 17px;
 
+      @include mq() {
+        padding: 20px 70px;
+      }
+
       div {
 
         .tags {
-          margin: 20px auto;
+          margin: 30px auto;
           overflow: hidden;
           text-align: left;
 
@@ -584,6 +594,13 @@ header {
     }
   }
 
+}
+
+.open {
+  .title-wrapper h1,
+  .detail-container .tags .tag {
+    z-index: -1;
+  }
 }
 
 

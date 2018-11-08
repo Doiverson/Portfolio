@@ -32,7 +32,6 @@ p {
 section {
   width: 100%;
   padding: 0 17px 30px;
-  border: 1px solid red;
   overflow: hidden;
 }
 
@@ -79,6 +78,7 @@ header a {
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
   z-index: 9999;
+  font-weight: bold;
 }
 
 .main-nav ul {
@@ -488,23 +488,36 @@ header a {
 }
 
 .detail-container .title-wrapper {
-  padding: 74px 17px 0 17px;
+  padding: 74px 17px 0;
   height: 45vh;
   position: relative;
 }
 
-.detail-container .title-wrapper h2 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
+.detail-container .title-wrapper h1 {
+  position: relative;
+}
+
+@media screen and (min-width: 700px) {
+  .detail-container .title-wrapper {
+    padding: 74px 70px 0;
+  }
+  .detail-container .title-wrapper h1 {
+    font-size: 5.2rem;
+  }
 }
 
 .detail-container .background-brown .dsc-wrapper {
   padding: 20px 17px;
 }
 
+@media screen and (min-width: 700px) {
+  .detail-container .background-brown .dsc-wrapper {
+    padding: 20px 70px;
+  }
+}
+
 .detail-container .background-brown .dsc-wrapper div .tags {
-  margin: 20px auto;
+  margin: 30px auto;
   overflow: hidden;
   text-align: left;
 }
@@ -556,6 +569,11 @@ header a {
 .detail-container .background-brown .ss-wrapper img {
   max-width: 80%;
   margin-bottom: 5px;
+}
+
+.open .title-wrapper h1,
+.open .detail-container .tags .tag {
+  z-index: -1;
 }
 
 .ityped-cursor {
