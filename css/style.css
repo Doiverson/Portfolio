@@ -323,7 +323,6 @@ header a {
 .projects-wrapper .work {
   width: 80%;
   margin-bottom: 5px;
-  z-index: -1;
 }
 
 .projects-wrapper .work img {
@@ -571,11 +570,6 @@ header a {
   margin-bottom: 5px;
 }
 
-.open .title-wrapper h1,
-.open .detail-container .tags .tag {
-  z-index: -1;
-}
-
 .ityped-cursor {
   font-size: 3.8rem;
   opacity: 1;
@@ -725,6 +719,7 @@ header a {
   backface-visibility: hidden;
   -webkit-transform: scale(1);
   transform: scale(1);
+  z-index: 100;
 }
 
 @media screen and (min-width: 700px) {

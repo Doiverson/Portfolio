@@ -396,7 +396,6 @@ header {
   .work {
     width: 80%;
     margin-bottom: 5px;
-    z-index: -1;
 
     img {
       max-width: 100%;
@@ -599,7 +598,6 @@ header {
 .open {
   .title-wrapper h1,
   .detail-container .tags .tag {
-    z-index: -1;
   }
 }
 
