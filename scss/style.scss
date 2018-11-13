@@ -385,7 +385,23 @@ header {
     @include flex;
     justify-content: space-around;
   }
+
+  @include mq(md) {
+    .two-col {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      .col {
+        margin: 0 10px;
+      }
+    }
+
+  }
 }
+
+
 
 
 // Projects

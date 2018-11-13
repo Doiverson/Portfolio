@@ -314,6 +314,18 @@ header a {
   justify-content: space-around;
 }
 
+@media screen and (min-width: 1000px) {
+  .about-wrapper .two-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .about-wrapper .two-col .col {
+    margin: 0 10px;
+  }
+}
+
 .projects-wrapper {
   display: flex;
   flex-wrap: wrap;

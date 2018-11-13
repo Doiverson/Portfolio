@@ -2,7 +2,7 @@
 const iTyped = document.querySelector('.ityped');
 
 window.ityped.init(iTyped, {
-    strings: ['Dead simple animated typing.', 'No dependencies'],
+    strings: ['Enthusiastic', 'Photo Lover', 'Workaholics', 'Surfer', 'Snowboader'],
     typeSpeed: 55,
     backSpeed: 30,
     startDelay: 500,
