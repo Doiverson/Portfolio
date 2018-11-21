@@ -1,0 +1,211 @@
+// Intro
+
+.intro-wrapper {
+  @include flex;
+  height: 100vh;
+  padding-top: 74px; // avoiding hiding behind header
+  justify-content: center;
+
+  .intro-content {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    h1 {
+      font-family: $font-Futura, sans-serif;
+      margin: 0;
+    }
+
+    .type-writer {
+      font-family: $font-Futura;
+      font-size: 2.5rem;
+      margin: 25px auto 0;
+      text-align: center;
+
+    }
+  }
+
+  @include mq() {
+    .intro-content {
+      text-align: left;
+
+      .type-writer {
+        font-size: 4.5rem;
+        text-align: left;
+      }
+    }
+
+    h1 {
+      font-size: $h1-sm;
+    }
+  }
+
+  @include mq(md) {
+    .type-writer {
+      font-size: 5.5rem;
+    }
+
+    h1 {
+      font-size: $h1-md;
+    }
+
+  }
+}
+
+
+// About Me
+
+.background-brown {
+  background-color: $bg;
+  color: $white;
+}
+
+.about-wrapper {
+  height: 100%;
+
+  .bio-img {
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      max-width: 80%;
+
+      @include mq() {
+        max-width: 70%;
+      }
+
+      @include mq() {
+        max-width: 60%;
+      }
+    }
+  }
+
+  .myself {
+    margin-bottom: 32px;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      line-height: $line-height;
+      margin-bottom: 0;
+    }
+  }
+
+  .flex-wrap {
+    @include flex;
+    justify-content: space-around;
+  }
+
+  @include mq(md) {
+    .two-col {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      .col {
+        margin: 0 10px;
+      }
+    }
+
+  }
+}
+
+
+// Projects
+
+.projects-wrapper {
+  @include flex;
+
+  .work {
+    width: 80%;
+    margin-bottom: 5px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .sub {
+    display: none;
+    position: relative;
+
+    .sub-title-wrapper {
+      @include hover-underline;
+      width: 65%;
+      height: 40%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
+
+  @include mq() {
+
+    flex-direction: row;
+
+    .work,
+    .sub {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    .sub {
+      display: block;
+    }
+  }
+}
+
+
+// Contact
+
+.contact-wrapper {
+  height: 100%;
+  text-align: center;
+
+  h2 {
+    font-family: $font-Futura;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  .email {
+    @include hover;
+  }
+
+  p {
+    @include hover;
+    font-size: 2rem;
+    text-align: left;
+    line-height: $line-height;
+    @include mq() {
+      text-align: center;
+    }
+  }
+
+  ul {
+    @include flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+
+    @include hover() {
+      color: $white;
+    }
+
+    a {
+      font-size: 2rem;
+      line-height: 2;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  }
+}

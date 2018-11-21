@@ -1,0 +1,35 @@
+// Variable (Size)
+$h1: 3.2rem;
+$h2: 2.5rem;
+$h3: 2.1rem;
+$p: 1.6rem;
+
+$h1-sm: 5.2rem;
+$h1-md: 7.2rem;
+
+
+// Variable (Font)
+$font-Futura: 'Futura SC Demi';
+$font-Roboto: 'Roboto';
+$white: #FFFFFF;
+
+
+$test-color: grey;
+$test-border: 1px solid red;
+
+// Variables (Color)
+$orange: #FF4E00;
+$bg: #4eaf99;
+$neon-green: #00ff9c;
+
+// Variable (Other)
+$section-padding-mobile: 0 17px 30px;
+$section-padding-desktop: 0 70px 30px;
+$line-height: 25px;
+
+// Media Query
+$breakpoints: (
+        'sm': 'screen and (min-width: 700px)',
+        'md': 'screen and (min-width: 1000px)',
+        'lg': 'screen and (min-width: 1200px)',
+) !default;

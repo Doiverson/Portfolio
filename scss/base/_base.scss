@@ -1,0 +1,49 @@
+// Base
+html {
+  font-size: 62.5%;
+  font-family: $font-Roboto;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Futura SC Demi';
+  src: url('../../font/FuturaSC-Dem.otf') format('opentype');
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+p {
+  font-size: $p;
+}
+
+section {
+  @include full-displayed;
+  padding: $section-padding-mobile;
+  overflow: hidden;
+
+  &:first-child {
+    height: 100vh;
+  }
+
+  @include mq() {
+    padding: $section-padding-desktop;
+  }
+}
+
+.top-padding {
+  padding-top: 74px;
+}

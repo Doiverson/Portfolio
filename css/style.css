@@ -265,7 +265,7 @@ header a {
 }
 
 .background-brown {
-  background-color: #1D0F00;
+  background-color: #4eaf99;
   color: #FFFFFF;
 }
 
@@ -403,6 +403,10 @@ header a {
 
 .contact-wrapper h2 {
   font-family: "Futura SC Demi";
+}
+
+.contact-wrapper h2 span {
+  color: #FF4E00;
 }
 
 .contact-wrapper .email a {
@@ -559,7 +563,7 @@ header a {
 }
 
 .detail-container .background-brown .dsc-wrapper div .tags .tag::after {
-  background: #1D0F00;
+  background: #4eaf99;
   border-bottom: 13px solid transparent;
   border-left: 10px solid  #ffffff26;
   border-top: 13px solid transparent;

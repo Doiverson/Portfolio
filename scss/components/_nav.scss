@@ -1,0 +1,86 @@
+// Main nav
+
+.main-nav {
+  display: none;
+  width: 100vh;
+  margin-left: 25px;
+  top: 0;
+  position: fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-100%);
+  z-index: 9999;
+  font-weight: bold;
+
+  ul {
+    @include flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    position: relative;
+
+    li {
+      margin-right: 25px;
+      list-style: none;
+      height: 100%;
+      text-transform: uppercase;
+
+      @include hover() {
+        color: black;
+      }
+
+      @include hover-underline() {
+        font-size: 1.8rem;
+      }
+
+      @include mq(md) {
+        a {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @include mq() {
+    display: block;
+  }
+}
+
+// Social Nav
+
+.social-nav {
+  display: none;
+  right: 25px;
+  top: 36%;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  width: 3%;
+
+  ul {
+    @include flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    position: relative;
+
+    @include hover() {
+      color: black;
+    }
+
+    @include scale() {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+
+    @include mq(md) {
+      a {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @include mq() {
+    display: block;
+  }
+}

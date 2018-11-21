@@ -1,0 +1,86 @@
+// Mixins
+@mixin full-displayed {
+  width: 100%;
+  //height: 100vh;
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@mixin hover {
+  a {
+    color: $neon-green;
+    text-decoration: none;
+    -webkit-transition: color ease;
+    -moz-transition: color ease;
+    -ms-transition: color ease;
+    -o-transition: color ease;
+    transition: color 1s;
+    @content;
+
+    &:hover {
+      color: $orange;
+    }
+
+  }
+}
+
+@mixin hover-underline {
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    @content;
+
+    &:after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: $orange;
+      transform: scale(0, 1);
+      transform-origin: center top;
+      transition: transform .5s;
+    }
+
+    &:hover:after {
+      transform: scale(1, 1);
+    }
+  }
+
+}
+
+@mixin scale {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: 0.5s;
+    @content;
+
+    &:hover {
+      -webkit-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -o-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2);
+    }
+  }
+}
+
+// Media Query
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
