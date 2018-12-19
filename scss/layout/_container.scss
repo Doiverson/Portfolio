@@ -97,8 +97,13 @@
     justify-content: space-around;
   }
 
+  .two-col {
+    opacity: 0;
+  }
+
   @include mq(md) {
     .two-col {
+
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -109,6 +114,45 @@
       }
     }
 
+  }
+}
+
+// About slide-down effect
+
+.fadeinDown {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 

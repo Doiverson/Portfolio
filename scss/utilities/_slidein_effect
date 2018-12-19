@@ -1,4 +1,6 @@
 
+// Works slide-in effect
+
 .slide-in {
   margin: 0 auto;
   opacity:0;
@@ -16,3 +18,5 @@
   opacity:1;
   transform:translateX(0%) scale(1);
 }
+
+
