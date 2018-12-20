@@ -208,6 +208,79 @@
 
 // Contact
 
+.glitch-bkg {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+    background-size: 100% 5px;
+    -webkit-animation: lines 2s ease-out infinite;
+    -o-animation: lines 2s ease-out infinite;
+    animation: lines 2s ease-out infinite;
+    opacity: .1;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+  }
+
+
+  .text {
+    height: 40px;
+    margin: 0 auto;
+
+    >* {
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      font-size: 30px;
+      -webkit-animation: giggle 1s ease infinite;
+      -o-animation: giggle 1s ease infinite;
+      animation: giggle 1s ease infinite;
+      mix-blend-mode: difference;
+    }
+  }
+
+  .b {
+    color: #00f;
+    left: -.5px;
+  }
+  .g {
+    color: #0f0;
+    animation-delay: -0.67s;
+  }
+  .r {
+    color: #f00;
+    animation-delay: -0.33s;
+    left: .5px;
+  }
+
+}
+
+@keyframes giggle {
+  0%, 100% {
+    transform:  translateY(-2px);
+  }
+  50% {
+    transform:  translateY(2px);
+  }
+}
+
+@keyframes lines {
+  0% {
+    background-position:0px 0px;
+  }
+  100% {
+    background-position:0px 25px;
+  }
+}
+
 .contact-wrapper {
   height: 100%;
   text-align: center;
@@ -215,13 +288,14 @@
   h2 {
     font-family: $font-Futura;
 
-    span {
-      color: $orange;
-    }
   }
 
   .email {
     @include hover;
+
+    a{
+      font-size: 30px;
+    }
   }
 
   p {

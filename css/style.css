@@ -318,6 +318,79 @@ section:first-child {
   }
 }
 
+.glitch-bkg {
+  position: relative;
+}
+
+.glitch-bkg:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+  background-size: 100% 5px;
+  -webkit-animation: lines 2s ease-out infinite;
+  -o-animation: lines 2s ease-out infinite;
+  animation: lines 2s ease-out infinite;
+  opacity: .1;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+}
+
+.glitch-bkg .text {
+  height: 40px;
+  margin: 0 auto;
+}
+
+.glitch-bkg .text > * {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+  -webkit-animation: giggle 1s ease infinite;
+  -o-animation: giggle 1s ease infinite;
+  animation: giggle 1s ease infinite;
+  mix-blend-mode: difference;
+}
+
+.glitch-bkg .b {
+  color: #00f;
+  left: -.5px;
+}
+
+.glitch-bkg .g {
+  color: #0f0;
+  animation-delay: -0.67s;
+}
+
+.glitch-bkg .r {
+  color: #f00;
+  animation-delay: -0.33s;
+  left: .5px;
+}
+
+@keyframes giggle {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
+
 .contact-wrapper {
   height: 100%;
   text-align: center;
@@ -325,10 +398,6 @@ section:first-child {
 
 .contact-wrapper h2 {
   font-family: "Futura SC Demi";
-}
-
-.contact-wrapper h2 span {
-  color: #FF4E00;
 }
 
 .contact-wrapper .email a {
@@ -343,6 +412,10 @@ section:first-child {
 
 .contact-wrapper .email a:hover {
   color: #FF4E00;
+}
+
+.contact-wrapper .email a {
+  font-size: 30px;
 }
 
 .contact-wrapper p {

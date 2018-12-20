@@ -1648,10 +1648,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-ityped@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/ityped/-/ityped-1.0.3.tgz#78430ab45e4836f4e565ecbacd221e58d46b44b3"
-
 js-base64@^2.1.8:
   version "2.4.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.9.tgz#748911fb04f48a60c4771b375cac45a80df11c03"
