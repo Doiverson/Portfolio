@@ -261,6 +261,7 @@ section:first-child {
 
 .projects-wrapper .work img {
   max-width: 100%;
+  vertical-align: middle;
 }
 
 .projects-wrapper .sub {
@@ -733,8 +734,12 @@ header a {
   position: relative;
 }
 
+.main-nav ul a {
+  padding: 3px;
+}
+
 .main-nav ul li {
-  margin-right: 25px;
+  margin: 0 12px;
   list-style: none;
   height: 100%;
   text-transform: uppercase;
@@ -856,4 +861,16 @@ header a {
   .social-nav {
     display: block;
   }
+}
+
+.highlight {
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  background: white;
+  left: 0;
+  z-index: -1;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
