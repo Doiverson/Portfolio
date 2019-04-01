@@ -4,15 +4,19 @@
 
   .title-wrapper {
     padding: 74px 17px 0;
-    height: 45vh;
+    height: 27rem;
     position: relative;
+
+    @include mq(){
+      height: 40rem;
+    }
 
     h1 {
       position: relative;
     }
 
     @include mq() {
-      padding: 74px 70px 0;
+      padding: 74px 10% 0;
 
       h1 {
         font-size: $h1-sm;
@@ -20,13 +24,24 @@
     }
   }
 
-  .background-brown {
+  .background-brown.work-pg {
+
+    .mockups {
+      width: 85%;
+      transform: translateY(-20%);
+      margin: 0 auto -20%;
+
+      img {
+        max-width: 100%;
+
+      }
+    }
 
     .dsc-wrapper {
-      padding: 20px 17px;
+      padding: 10px 20px 17px 20px;
 
       @include mq() {
-        padding: 20px 70px;
+        padding: 45px 10%;
       }
 
       div {
@@ -81,17 +96,15 @@
       padding-bottom: 20px;
 
       img {
-        max-width: 80%;
+        max-width: 90%;
         margin-bottom: 5px;
+
+        @include mq() {
+          max-width: 80%;
+        }
       }
 
     }
   }
 
-}
-
-.open {
-  .title-wrapper h1,
-  .detail-container .tags .tag {
-  }
 }
