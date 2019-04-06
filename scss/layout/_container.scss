@@ -163,8 +163,18 @@
   @include flex;
 
   .work {
+    position: relative;
     width: 80%;
     margin-bottom: 5px;
+
+    a {
+      color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+    }
 
     img {
       max-width: 100%;
@@ -187,6 +197,11 @@
       right: 0;
       left: 0;
       text-align: center;
+
+      a {
+        font-size: 1.6rem;
+      }
+
     }
   }
 
@@ -198,6 +213,10 @@
     .sub {
       width: 50%;
       margin-bottom: 0;
+    }
+
+    .work a {
+      display: none;
     }
 
     .sub {

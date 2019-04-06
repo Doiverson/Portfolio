@@ -255,8 +255,18 @@ section:first-child {
 }
 
 .projects-wrapper .work {
+  position: relative;
   width: 80%;
   margin-bottom: 5px;
+}
+
+.projects-wrapper .work a {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
 }
 
 .projects-wrapper .work img {
@@ -305,6 +315,10 @@ section:first-child {
   transform: scale(1, 1);
 }
 
+.projects-wrapper .sub .sub-title-wrapper a {
+  font-size: 1.6rem;
+}
+
 @media screen and (min-width: 700px) {
   .projects-wrapper {
     flex-direction: row;
@@ -313,6 +327,9 @@ section:first-child {
   .projects-wrapper .sub {
     width: 50%;
     margin-bottom: 0;
+  }
+  .projects-wrapper .work a {
+    display: none;
   }
   .projects-wrapper .sub {
     display: block;
@@ -614,11 +631,47 @@ header a {
 .detail-container .background-brown.work-pg .ss-wrapper img {
   max-width: 90%;
   margin-bottom: 5px;
+  opacity: 0;
 }
 
 @media screen and (min-width: 700px) {
   .detail-container .background-brown.work-pg .ss-wrapper img {
     max-width: 80%;
+  }
+}
+
+.fadeinDown {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
@@ -826,7 +879,7 @@ header a {
   -webkit-transform: rotate(-90deg) translateX(-100%);
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
-  z-index: 9999;
+  z-index: 999;
   font-weight: bold;
 }
 

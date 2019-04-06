@@ -15,7 +15,6 @@ function debounce(func, wait = 10, immediate = true) {
 }
 
 const sliderImages = document.querySelectorAll('.slide-in');
-console.log(sliderImages);
 
 function checkSlide() {
 
