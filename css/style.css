@@ -60,7 +60,7 @@ html {
 
 @font-face {
   font-family: 'Futura SC Demi';
-  src: url("../../font/FuturaSC-Dem.otf") format("opentype");
+  src: url("../font/FuturaSC-Dem.otf") format("opentype");
 }
 
 h1 {
