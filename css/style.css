@@ -128,6 +128,7 @@ section:first-child {
 @media screen and (min-width: 700px) {
   .intro-wrapper .intro-content {
     text-align: left;
+    margin-left: 3rem;
   }
   .intro-wrapper .intro-content .type-writer {
     font-size: 4.5rem;
@@ -190,6 +191,61 @@ section:first-child {
   margin-bottom: 0;
 }
 
+.about-wrapper .myself .resume {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-wrapper .myself .resume h3 {
+  display: inline-block;
+  border: 2px solid #FF4E00;
+  padding: 8px;
+  margin-bottom: 0;
+  margin-top: 3.5rem;
+}
+
+.about-wrapper .myself .resume h3 a {
+  color: #00ff9c;
+  text-decoration: none;
+  -webkit-transition: color ease;
+  -moz-transition: color ease;
+  -ms-transition: color ease;
+  -o-transition: color ease;
+  transition: color 1s;
+}
+
+.about-wrapper .myself .resume h3 a:hover {
+  color: #FF4E00;
+}
+
+.about-wrapper .myself .resume h3 a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.about-wrapper .myself .resume h3 a:after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #FF4E00;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .5s;
+}
+
+.about-wrapper .myself .resume h3 a:hover:after {
+  transform: scale(1, 1);
+}
+
+.about-wrapper .myself .resume h3 a {
+  color: white;
+}
+
 .about-wrapper .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -206,7 +262,7 @@ section:first-child {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: start;
   }
   .about-wrapper .two-col .col {
     margin: 0 10px;
