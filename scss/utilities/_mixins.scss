@@ -65,7 +65,7 @@
     -moz-transition: transform 0.5s linear;
     -ms-transition: transform 0.5s linear;
     -o-transition: transform 0.5s linear;
-    transition: 0.5s;
+    transition: 0.5s linear;
     @content;
 
     &:hover {

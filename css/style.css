@@ -60,7 +60,7 @@ html {
 
 @font-face {
   font-family: 'Futura SC Demi';
-  src: url("../font/FuturaSC-Dem.otf") format("opentype");
+  src: url("../../font/FuturaSC-Dem.otf") format("opentype");
 }
 
 h1 {
@@ -258,6 +258,7 @@ section:first-child {
   position: relative;
   width: 80%;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .projects-wrapper .work a {
@@ -269,9 +270,18 @@ section:first-child {
   text-decoration: none;
 }
 
-.projects-wrapper .work img {
+.projects-wrapper .work .scale-img {
   max-width: 100%;
   vertical-align: middle;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.projects-wrapper .work .scale {
+  transform: scale(1.1);
 }
 
 .projects-wrapper .sub {
@@ -315,7 +325,7 @@ section:first-child {
   transform: scale(1, 1);
 }
 
-.projects-wrapper .sub .sub-title-wrapper a {
+.projects-wrapper .sub .sub-title-wrapper h2 + a {
   font-size: 1.6rem;
 }
 
@@ -333,79 +343,6 @@ section:first-child {
   }
   .projects-wrapper .sub {
     display: block;
-  }
-}
-
-.glitch-bkg {
-  position: relative;
-}
-
-.glitch-bkg:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
-  background-size: 100% 5px;
-  -webkit-animation: lines 2s ease-out infinite;
-  -o-animation: lines 2s ease-out infinite;
-  animation: lines 2s ease-out infinite;
-  opacity: .1;
-  mix-blend-mode: color-burn;
-  pointer-events: none;
-}
-
-.glitch-bkg .text {
-  height: 40px;
-  margin: 0 auto;
-}
-
-.glitch-bkg .text > * {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  font-size: 30px;
-  -webkit-animation: giggle 1s ease infinite;
-  -o-animation: giggle 1s ease infinite;
-  animation: giggle 1s ease infinite;
-  mix-blend-mode: difference;
-}
-
-.glitch-bkg .b {
-  color: #00f;
-  left: -.5px;
-}
-
-.glitch-bkg .g {
-  color: #0f0;
-  animation-delay: -0.67s;
-}
-
-.glitch-bkg .r {
-  color: #f00;
-  animation-delay: -0.33s;
-  left: .5px;
-}
-
-@keyframes giggle {
-  0%, 100% {
-    transform: translateY(-2px);
-  }
-  50% {
-    transform: translateY(2px);
-  }
-}
-
-@keyframes lines {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 0px 25px;
   }
 }
 
@@ -433,7 +370,13 @@ section:first-child {
 }
 
 .contact-wrapper .email a {
-  font-size: 30px;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 700px) {
+  .contact-wrapper .email a {
+    font-size: 30px;
+  }
 }
 
 .contact-wrapper p {
@@ -997,7 +940,7 @@ header a {
   -moz-transition: transform 0.5s linear;
   -ms-transition: transform 0.5s linear;
   -o-transition: transform 0.5s linear;
-  transition: 0.5s;
+  transition: 0.5s linear;
   font-size: 1.8rem;
   line-height: 2;
 }
