@@ -146,3 +146,23 @@
     transform: none;
   }
 }
+
+.page-link {
+  margin: 0 auto;
+  text-align: center;
+
+  h3 {
+    display: inline-block;
+    border: 2px solid $orange;
+    padding: 8px;
+    margin-bottom: 0;
+    margin-top: 3.5rem;
+
+    @include hover;
+    @include hover-underline;
+
+    a {
+      color: white;
+    }
+  }
+}
