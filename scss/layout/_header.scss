@@ -17,3 +17,86 @@ header {
     margin-bottom: 12px;
   }
 }
+
+
+svg{
+  width: 70px;
+  height: 70px;
+}
+
+path,polygon {
+  fill: none;
+  stroke: #ff4e00; /*線の色を指定する*/
+  stroke-dasharray: 2000;/*線の間隔を指定する*/
+  stroke-dashoffset: 0;/*線の位置を指定する(IEは効かない属性)*/
+  stroke-width: 1;/*線の太さを指定する*/
+  -webkit-animation: hello 3s ease-in forwards;
+  animation: hello 3s ease-in forwards;
+}
+
+polygon {
+  stroke: #FF4E00;
+  -webkit-animation: hello2 3s ease-in forwards;
+  animation: hello2 3s ease-in forwards;
+}
+
+@-webkit-keyframes hello {
+  0% {
+    stroke-dashoffset: 2000;
+    fill:transparent; /*透過*/
+  }
+  50% {
+    fill:transparent; /*透過*/
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#ff4e00;
+  }
+}
+@keyframes hello {
+  0% {
+    stroke-dashoffset: 2000;
+    fill:transparent; /*透過*/
+  }
+  50% {
+    fill:transparent; /*透過*/
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#ff8f6c;
+  }
+}
+
+@-webkit-keyframes hello2 {
+  0% {
+    stroke-dashoffset: 2000;
+    fill:transparent; /*透過*/
+  }
+  50% {
+    fill:transparent; /*透過*/
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#ff0;
+  }
+}
+@keyframes hello2 {
+  0% {
+    stroke-dashoffset: 2000;
+    fill:transparent; /*透過*/
+  }
+  50% {
+    fill:transparent; /*透過*/
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#ff0;
+  }
+}
+
+//#layer101 {
+//  fill-opacity: .5;
+//}
+
+
+
