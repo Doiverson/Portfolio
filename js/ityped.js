@@ -2,7 +2,7 @@
 const iTyped = document.querySelector('.ityped');
 
 window.ityped.init(iTyped, {
-    strings: ['Enthusiastic', 'Photo Lover', 'Workaholics', 'Surfer', 'Snowboader'],
+    strings: ['Japanese', 'Front-end Developer', 'Openness', 'Enthusiastic', 'Photo Lover', 'Workaholics', 'Surfer', 'Snowboader'],
     typeSpeed: 55,
     backSpeed: 30,
     startDelay: 500,
