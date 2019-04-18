@@ -1,3 +1,3 @@
 # Portofolio
 
-https://doiverson.github.io/Portfolio/
+https://shosukedoi.com/
